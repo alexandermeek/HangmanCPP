@@ -1,4 +1,5 @@
 #include "Hangman.h"
+#include <iostream>
 #include <string>
 #include <vector>
 
@@ -8,6 +9,7 @@ Hangman::Hangman(string word, int maxGuesses)
 {
     this->word = word;
     this->maxGuesses = maxGuesses;
+    cout << "Hangman created. With  a word of " << this->word << " and " << this->maxGuesses << " guesses.\n";
 }
 
 Hangman::~Hangman()
@@ -92,5 +94,5 @@ string Hangman::getFoundWord()
 
 int main()
 {
-    return 0;
+    Hangman han("hello", 4);
 }
