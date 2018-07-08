@@ -1,8 +1,11 @@
 #include "Hangman.h"
+
 #include <iostream>
 #include <string>
 #include <vector>
 #include <algorithm>
+
+class NoInputException;
 
 using namespace std;
 
@@ -67,7 +70,9 @@ bool Hangman::isLost() {
 }
 
 void Hangman::checkValidGuess(char letter) {
-
+    if (letter == ' ') {
+        throw NoInputException();
+    }
 }
 
 int Hangman::findOccurrencesOf(char letter) {

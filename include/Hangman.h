@@ -4,8 +4,7 @@
 #include <string>
 #include <vector>
 
-class Hangman
-{
+class Hangman {
     public:
         Hangman(std::string word, int maxGuesses);
         virtual ~Hangman();
